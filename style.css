@@ -1,0 +1,58 @@
+.box {
+    /* width: 300px; */
+    aspect-ratio: 1;
+    /* border: 2px solid red; */
+    /* background: repeating-conic-gradient(#000 0 .5%, #0000 0 1%); */
+}
+
+/* .box {
+    background: repeating-conic-gradient(#000 0 0.0001%, #0000 0 0.0002%);
+} */
+
+/* .box {
+    background: repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 
+    60% 60%/3000px 3000px,
+    repeating-conic-gradient(#000 0 0.0001%, #fff 0 0.0002%)
+    60% 60%/3000px 3000px;
+    background-blend-mode: difference;
+    animation: tv-nosignal .2s infinite alternate;
+} */
+
+@keyframes tv-nosignal {
+    100% {
+        background-position: 50% 0, 60% 50%;
+    }
+}
+
+
+
+/* box with tv */
+.box {
+    position: relative;
+    top: 100px;
+    width: 80%;
+    margin: auto;
+    border: none;
+}
+
+.box img {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 15%;
+    bottom: 40%;
+    background: repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 
+    60% 60%/3000px 3000px,
+    repeating-conic-gradient(#000 0 0.0001%, #fff 0 0.0002%)
+    60% 60%/3000px 3000px;
+    background-blend-mode: difference;
+    animation: tv-nosignal .2s infinite alternate;
+}
